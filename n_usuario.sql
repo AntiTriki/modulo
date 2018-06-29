@@ -1,0 +1,2 @@
+INSERT INTO n.usuario (correo, contra, nombre, apellido, logo, ci, visita, nivel) VALUES ('no@no.com', '123', 'Pepe', 'Botellas', 'images/user.jpg', '4566321lp', '2017-09-26 21:27:03', 1);
+INSERT INTO n.usuario (correo, contra, nombre, apellido, logo, ci, visita, nivel) VALUES ('ni@ni.com', '12', '1212', '12121', 'images/user.jpg', null, null, 3);

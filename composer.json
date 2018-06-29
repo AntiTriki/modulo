@@ -1,0 +1,6 @@
+{
+    "require": {
+        "jaspersoft/rest-client": "v2.0.0",
+        "cossou/jasperphp": "^2.3"
+    }
+}

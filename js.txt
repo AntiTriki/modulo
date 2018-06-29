@@ -1,0 +1,63 @@
+<script>
+        $(function () {
+            bloqu();
+            var data = [
+                { "id" : "0", "parent" : "#", "text" : "Cuentas Contables" },
+            ];
+            var idEmpresa = $('#idEmpresa').val();
+            var usuario =$('#idusuario').val();
+            var listah;
+            var route = '/ErpSoftware/public/test/jstree/'+idEmpresa+'/'+usuario;
+            $.ajax({
+                url :  route,
+                type: 'GET',
+                success : function(data){
+                    data = JSON.parse(data);
+                    if ((data.errors)) {
+                        alert('Oops!  ocurre un error en la respuesta con el sistema');
+                    }
+                    else {
+                        listah = data.listaC;
+
+                        agregar();
+                    }
+
+                },
+                error: function(e) {
+                    alert('Error'+e.responseText);
+                }
+            });
+            function agregar(){
+                $.each(listah,function(index,element){
+
+                    data.push({"id" : ""+element.codigo, "parent" : ""+element.cuenta_Padre, "text" : ""+element.codigo+" - "+element.nombre });
+
+                });
+                $("#jstree").jstree({
+                    "core" : {
+                        // so that create works
+                        "check_callback" : true,
+
+                        "data": data
+                    }
+
+                }).on('create_node.jstree', function(e, data) {
+                    console.log('saved');
+                });
+                $("#sam").on("click",function() {
+                    alert("dsfas");
+                    $('#jstree').jstree().create_node('65' ,  { "id" : "ajson5", "text" : "newly added" }, "last", function(){
+                            alert("done");
+                        }
+                    );
+                });
+
+
+            }
+
+
+
+
+
+        });
+    </script>

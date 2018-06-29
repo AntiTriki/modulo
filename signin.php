@@ -33,34 +33,21 @@ $row2 = mysqli_fetch_array($result_user);
 if(mysqli_num_rows($result_user)>0)
 {
 $_SESSION["id_usuario"] = $row2["id"];
-$_SESSION["pass"] = $row2["contra"];
-$_SESSION["correo"]=$row2["correo"];
+$_SESSION["pass"] = $row2["password"];
+$_SESSION["correo"]=$row2["usuario"];
 $_SESSION["nombre"]=utf8_decode($row2["nombre"]);
-$_SESSION["apellido"]=utf8_decode($row2["apellido"]);
-$_SESSION["d_identidad"]=$row2["ci"];
-$_SESSION["logo"]=$row2["logo"];
-$_SESSION["fecha_nac"]=$row2["fecha_nac"];
-$_SESSION["ciudad"]=utf8_decode($row2["ciudad"]);
-$_SESSION["estado_civil"]=utf8_decode($row2["estado_civil"]);
-$_SESSION["ocupacion"]=utf8_decode($row2["ocupacion"]);
-$_SESSION["activo"]=$row2["activo"];
-$_SESSION["telefono"]=$row2["telefono"];
-$_SESSION["celular"]=$row2["celular"];
-$_SESSION["sexo"]=$row2["sexo"];
-$_SESSION["nit"]=$row2["nit"];
-$_SESSION["factura_nombre"]=utf8_decode($row2["factura_nombre"]);
-$_SESSION["correo_nombre"]=$row2["correo_nombre"];
-$_SESSION["telefono_mp"]= $row2["telefono_mp"];
-$_SESSION["nombre_mp"]=$row2["nombre_mp"];
+
+$_SESSION["direccion"]=$row2["direccion"];
+$_SESSION["id_lab"]=$row2["id_lab"];
+$_SESSION["id_centro"]=$row2["id_centro"];
+
 
 $FecHr = date('Y-m-d H:i:s');
-$query_ing = sprintf("UPDATE usuario set visita = '".$FecHr."' where id = ".$_SESSION["id_usuario"]."") or die("Error usu:".mysqli_error($link));
-$result_ing=mysqli_query($link,$query_ing);
-// Free result set
+
 mysqli_free_result($result_user);
 mysqli_close($link);
 
-header("Location:index.php");
+header("Location:inicio.php");
 }else{
 $query_empre = sprintf("SELECT
 e.id_empresa,

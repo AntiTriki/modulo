@@ -1,0 +1,640 @@
+var listaCuentas;
+var listah;
+var ultimo;
+var datoPadre;
+var universalUrl = '/ErpSoftware/public/';
+
+function quitar() {
+    $('#confirmarDatos').removeAttr('disabled')
+}
+
+
+function demo_create() {
+    bloqu();
+    limpiarModal();
+    $('#CodCuenta').attr('disabled', 'disabled');
+    $('#pCodCuenta').attr('disabled', 'disabled');
+    $('#codNivel').attr('disabled','disabled');
+    $('.modal-title').text('Agregar Cuenta');
+    var ref = $('#jstree').jstree(true),
+        sel = ref.get_selected();
+    if(!sel.length) {
+        sel = 0;
+        $('#pCodCuenta').val(sel);
+        traerlistas();
+        localStorage.setItem("Accion", "traerTodo");
+        getHijos();
+        return false; }
+    $('#pCodCuenta').val(sel);
+    traerlistas();
+    sel = sel[0];
+
+  //  sel = ref.create_node(sel, {"type":"file"});
+    localStorage.setItem("Accion", "traerTodo");
+    getHijos();
+
+
+
+}
+
+function traerlistas() {
+    bloqu();
+    var idEmpresa = $('#idEmpresa').val();
+    var idPcuenta = $('#pCodCuenta').val();
+    var route = universalUrl+'Cuenta/lista/'+idEmpresa+'/'+idPcuenta+'/msj';
+    var type = 'GET';
+    $.ajax({
+        url :  route,
+        type: type,
+        success : function(data){
+            data = JSON.parse(data);
+            if ((data.errors)) {
+                alert('Oops!  ocurre un error en la respuesta con el sistema');
+            }
+            else {
+                listaCuentas = data.listaC;
+                if(listaCuentas.length == 0)
+                {
+                    obtenerPadre();
+                }else {
+                CrearCuenta();
+                }
+            }
+
+        },
+        error: function(e) {
+            alert('Error'+e.responseText);
+        }
+    });
+}
+function obtenerPadre() {
+    var idEmpresa = $('#idEmpresa').val();
+    var idPcuenta = $('#pCodCuenta').val();
+    var route = universalUrl+'Cuenta/Padre/'+idEmpresa+'/'+idPcuenta;
+    var type = 'GET';
+    $.ajax({
+        url :  route,
+        type: type,
+        success : function(data){
+            data = JSON.parse(data);
+            if ((data.errors)) {
+                alert('Oops!  ocurre un error en la respuesta con el sistema');
+            }
+            else {
+                datoPadre = data.listaC;
+                $.each(datoPadre,function (index, elemento) {
+                    elemento.nivel =elemento.nivel+1;
+                    elemento.cuenta_id=elemento.id;
+                });
+                listaCuentas = datoPadre;
+                CrearCuenta();
+
+
+            }
+
+        },
+        error: function(e) {
+            alert('Error'+e.responseText);
+        }
+    });
+
+}
+function CrearCuenta() {
+    $.each(listaCuentas,function (index, elemento) {
+        ultimo =elemento;
+    });
+    var nivelEmpresa = $('#NivelEmpresa').val();
+    var nivel ;
+    if(ultimo == null){
+        nuevaCuenta();
+        nivel = 1;
+    }
+    else {
+        nivel = ultimo.nivel;
+
+
+        if (nivel <= nivelEmpresa) {
+
+
+            var id = "" + ultimo.codigo;
+            if (ultimo.nivel == 1) {
+                id = id.substring(0, 1);
+                var complement = (ultimo.codigo.toString()).substring(1)
+                id = parseInt(id);
+                id = id + 1;
+                id = id + "" + complement
+
+            }
+            if (ultimo.nivel == 2) {
+                id = id.toString().substring(2, 4);
+                var complement = (ultimo.codigo.toString()).substring(0, 2)
+                var complement2 = (ultimo.codigo.toString()).substring(4)
+                id = parseInt(id);
+                //1.00.00.00.00.00.00.00.00
+
+                id = id + 1;
+                if (id <= 9) {
+                    id = "0" + id;
+                }
+                id = complement + "" + id + "" + complement2
+            }
+            if (ultimo.nivel == 3) {
+                id = id.toString().substring(5, 7);
+                var complement = (ultimo.codigo.toString()).substring(0, 5)
+                var complement2 = (ultimo.codigo.toString()).substring(7)
+                id = parseInt(id);
+
+                id = id + 1;
+                if (id <= 9) {
+                    id = "0" + id;
+                }
+                id = complement + "" + id + "" + complement2
+            }
+            if (ultimo.nivel == 4) {
+                id = id.toString().substring(8, 10);
+                var complement = (ultimo.codigo.toString()).substring(0, 8)
+                var complement2 = (ultimo.codigo.toString()).substring(10)
+                id = parseInt(id);
+
+                id = id + 1;
+                if (id <= 9) {
+                    id = "0" + id;
+                }
+                id = complement + "" + id + "" + complement2
+            }
+            if (ultimo.nivel == 5) {
+                id = id.toString().substring(11, 13);
+                var complement = (ultimo.codigo.toString()).substring(0, 11)
+                var complement2 = (ultimo.codigo.toString()).substring(13)
+                id = parseInt(id);
+
+                id = id + 1;
+                if (id <= 9) {
+                    id = "0" + id;
+                }
+                id = complement + "" + id + "" + complement2
+            }
+            if (ultimo.nivel == 6) {
+                id = id.toString().substring(14, 16);
+                var complement = (ultimo.codigo.toString()).substring(0, 14)
+                var complement2 = (ultimo.codigo.toString()).substring(16)
+                id = parseInt(id);
+
+                id = id + 1;
+                if (id <= 9) {
+                    id = "0" + id;
+                }
+                id = complement + "" + id + "" + complement2
+            }
+            if (ultimo.nivel == 7) {
+                id = id.toString().substring(17, 19);
+                var complement = (ultimo.codigo.toString()).substring(0, 17)
+                var complement2 = (ultimo.codigo.toString()).substring(19)
+                id = parseInt(id);
+
+                id = id + 1;
+                if (id <= 9) {
+                    id = "0" + id;
+                }
+                id = complement + "" + id + "" + complement2
+            }
+            $('#CodCuenta').val('' + id);
+
+            $('#codNivel').val(ultimo.nivel);
+
+
+            $('#ModalCuenta').modal('show');
+        }
+        else {
+            setTimeout(function () {
+
+                toastr.error('No puede crear mas niveles, esta en su limite', 'Error Alert', {timeOut: 5000});
+            }, 500);
+
+        }
+    }
+}
+function nuevaCuenta() {
+    limpiarModal();
+
+    var nivel = $('#NivelEmpresa').val();
+    if(nivel == '3')
+    {
+        $('#CodCuenta').val('1.00.00');
+    }
+    if(nivel == '4')
+    {
+        $('#CodCuenta').val('1.00.00.00');
+    }
+    if(nivel == '5')
+    {
+        $('#CodCuenta').val('1.00.00.00.00');
+    }
+    if(nivel == '6')
+    {
+        $('#CodCuenta').val('1.00.00.00.00.00');
+    }
+    if(nivel == '7')
+    {
+        $('#CodCuenta').val('1.00.00.00.00.00.00');
+    }
+    $('#pCodCuenta').val('0');
+    $('#codNivel').val('1');
+    $('#tipoCuenta').val('Universal');
+    $('#ModalCuenta').modal('show');
+
+}
+function demo_rename() {
+
+    limpiarModal();
+    $('#CodCuenta').attr('disabled', 'disabled');
+    $('#pCodCuenta').attr('disabled', 'disabled');
+    $('.modal-title').text('Editar Cuenta');
+    var ref = $('#jstree').jstree(true),
+        sel = ref.get_selected();
+    if(!sel.length) { sel=0;
+        $('#CodCuenta').val(sel);
+        return false; }
+    bloqu();
+    $('#CodCuenta').val(sel);
+    sel = sel[0];
+
+    localStorage.setItem("Accion", "traerTodo");
+    getHijos();
+    EditarCuenta();
+
+};
+function EditarCuenta() {
+        var idCuenta= $('#CodCuenta').val();
+    var idEmpresas = $('#idEmpresa').val();
+    var usuarioid = $('#idusuario').val();
+
+    var route = universalUrl+'Cuenta/getCuenta';
+    var type = 'GET';
+    $.ajax({
+        url :  route,
+        type: type,
+        data: {
+            'idC':idCuenta,
+            'empresa_id': idEmpresas,
+            'users_id': usuarioid
+        },
+        success : function(data){
+            data = JSON.parse(data);
+            if ((data.errors)) {
+                alert('Oops!  ocurre un error en la respuesta con el sistema');
+            }
+            else {
+                listaCuentas = data.listaC;
+
+                    pintarEditarModal();
+
+            }
+
+        },
+        error: function(e) {
+            alert('Error'+e.responseText);
+        }
+    });
+
+}
+function pintarEditarModal() {
+    $.each(listaCuentas,function (index, elemento) {
+        $('#pCodCuenta').val(elemento.cuenta_id);
+        $('#NombreCuenta').val(elemento.nombre);
+        $('#codNivel').val(elemento.nivel);
+        $('#codNivel').attr('disabled','disabled');
+        $('#tipoCuenta').val(elemento.tipoCuenta);
+    });
+    $('#ModalCuenta').modal('show');
+}
+function demo_delete() {
+    bloqu();
+    limpiarModal();
+    $('.modal-title').text('Eliminar Cuenta');
+    $('#pCodCuenta').attr('disabled','disabled');
+    $('#NombreCuenta').attr('disabled','disabled');
+    $('#CodCuenta').attr('disabled','disabled');
+    $('#codNivel').attr('disabled','disabled');
+    $('#tipoCuenta').attr('disabled','disabled');
+
+    var ref = $('#jstree').jstree(true),
+        sel = ref.get_selected();
+    if(!sel.length) {sel = 0;
+        $('#CodCuenta').val(sel);
+        return false; }
+
+    $('#CodCuenta').val(sel);
+
+    localStorage.setItem("Accion", "traerHijos");
+    getHijos();
+    EditarCuenta();
+};
+function limpiarModal() {
+    $('#pCodCuenta').val("");
+    $('#pCodCuenta').removeAttr('disabled');
+    $('#NombreCuenta').val("");
+    $('#NombreCuenta').removeAttr('disabled');
+    $('#codNivel').val("");
+    $('#codNivel').removeAttr('disabled');
+    $('#tipoCuenta').val("");
+    $('#tipoCuenta').removeAttr('disabled');
+    $('#confirmarDatos').removeAttr('disabled');
+}
+function getHijos() {
+    var idEmpresa = $('#idEmpresa').val();
+    var idPcuenta;
+    var msj='lista';
+    if(localStorage.getItem("Accion") =="traerHijos"){
+        idPcuenta  = $('#CodCuenta').val();
+    }
+    else
+    {
+        if(localStorage.getItem("Accion") =="traerTodo"){
+            idPcuenta  = 0;
+            msj = 'todo';
+        }
+    }
+    var route = universalUrl+'Cuenta/lista/'+idEmpresa+'/'+idPcuenta+'/'+msj;
+    var type = 'GET';
+    $.ajax({
+        url :  route,
+        type: type,
+        success : function(data){
+            data = JSON.parse(data);
+            if ((data.errors)) {
+                alert('Oops!  ocurre un error en la respuesta con el sistema');
+            }
+            else {
+                listah = data.listaC;
+            }
+
+        },
+        error: function(e) {
+            alert('Error'+e.responseText);
+        }
+    });
+}
+
+//mega funcion
+function saveCuenta() {
+    $('#confirmarDatos').attr('disabled','disabled');
+        var id = $('#CodCuenta').val();
+    var nombreC = $('#NombreCuenta').val();
+    var nivel = $('#codNivel').val();
+    var tipoCuentaC
+    if (nivel == $('#NivelEmpresa').val()) {
+        tipoCuentaC = '1';
+    }
+    else{
+        tipoCuentaC = '0';
+    }
+    var cuentaID = $('#pCodCuenta').val();
+    var empresaID= $('#idEmpresa').val();
+    var userID = $('#idusuario').val();
+    var idPadre  ;
+    $.each(datoPadre,function (index, elemento) {
+        idPadre =elemento.id;
+    });
+    if(!datoPadre){
+        idPadre =0 ;
+    }else {
+        if(datoPadre.length ==0){
+            idPadre =0 ;
+        }
+    }
+
+    var token = $('input[name=_token]').val();
+    var titulo = $('.modal-title').text();
+
+    if( titulo == 'Agregar Cuenta' ||
+        titulo == 'Agregar CuentaAgregar CuentaAgregar CuentaAgregar Cuenta') {
+        if(!ultimo){
+            idPadre =0 ;
+        }else {
+            idPadre= ultimo.cuenta_id;
+        };
+        var contadorN=0;
+       $ .each(listah, function (index, elemento) {
+            if(nombreC == elemento.nombre){
+                contadorN = contadorN +1;
+            }
+       });
+
+        //validacion
+        if(contadorN >0){
+            setTimeout(function () {
+                $('#addModal').modal('show');
+                toastr.error('El nombre ingresado ya es usado', 'Nombre ', {timeOut: 5000});
+            }, 500);
+            return false
+        }
+        $.ajax({
+            type: 'POST',
+            url: universalUrl + 'Cuenta',
+            data: {
+                '_token': token,
+                'idC': id,
+                'nombreC': nombreC,
+                'nivelC': nivel,
+                'tipoC': tipoCuentaC,
+                'CuentaID': cuentaID,
+                'empresa_id': empresaID,
+                'users_id': userID,
+                'idP': idPadre
+            },
+            success: function (data) {
+
+                llenarArbol(data);
+                $('#ModalCuenta').modal('hide');
+
+            },
+            error: function (e) {
+                alert('Error en el servidor ' + e);
+            }
+
+        });//fin ajax
+    }
+    if(titulo == 'Editar CuentaEditar CuentaEditar CuentaEditar Cuenta' || titulo == 'Editar Cuenta') {
+
+        var contadorN=0;
+        $ .each(listah, function (index, elemento) {
+            if(nombreC == elemento.nombre){
+                contadorN = contadorN +1;
+            }
+            if(id == elemento.codigo && nombreC == elemento.nombre){
+                contadorN = contadorN -1;
+            }
+        });
+        if(contadorN >0){
+            setTimeout(function () {
+                $('#addModal').modal('show');
+                toastr.error('El nombre ingresado ya es usado', 'Nombre ', {timeOut: 5000});
+            }, 500);
+            return false
+        }
+        $('#ModalCuenta').modal('hide');
+        bloqu();
+        $.ajax({
+            type: 'PUT',
+            url: universalUrl+'Cuenta',
+            data: {
+                '_token': token,
+                'idC': id,
+                'nombreC': nombreC,
+                'nivelC': nivel,
+                'tipoC': tipoCuentaC,
+                'CuentaID': cuentaID,
+                'empresa_id': empresaID,
+                'users_id': userID
+            },
+            success: function(data) {
+
+               modificarArbol();
+            }
+        });
+
+    }
+    if(titulo == 'Eliminar CuentaEliminar CuentaEliminar CuentaEliminar Cuenta' ||
+        titulo == 'Eliminar Cuenta') {
+
+        if(listah.length == 0){
+        $.ajax({
+            type: 'DELETE',
+            url: universalUrl+'Cuenta',
+            data: {
+                '_token': token,
+                'idC': id,
+                'CuentaID': cuentaID,
+                'empresa_id': empresaID,
+                'users_id': userID
+            },
+            success: function(data) {
+                if ((data.errors)) {
+                    setTimeout(function () {
+                        $('#addModal').modal('show');
+                        toastr.error('Validation error!', 'Error Alert', {timeOut: 5000});
+                    }, 500);
+                }
+                else
+                {
+                    toastr.success('Realizado Correctamente Cuenta Eliminada!', 'Success Alert', {timeOut: 5000});
+                    var ref = $('#jstree').jstree(true),
+                        sel = ref.get_selected();
+                    $('#ModalCuenta').modal('hide');
+                    ref.delete_node(sel);
+
+                }
+            },
+            error : function(data) {
+
+                setTimeout(function () {
+                    toastr.error('No puede eliminar Esta Gestion, tiene Periodo registrados!', 'Error Alert', {timeOut: 5000});
+                }, 500);
+
+            }
+        });
+
+
+    }else {
+            setTimeout(function () {
+
+                toastr.error('No puede eliminar LA cuenta, tiene subCuentas registrados!', 'Error Alert', {timeOut: 5000});
+            }, 500);
+            return false;
+        }
+    }
+}
+function llenarArbol(data){
+    setTimeout(function () {
+        $('#addModal').modal('show');
+        toastr.success('Se creo la cuenta Correctamente', 'Correcto', {timeOut: 5000});
+    }, 500);
+    id = data.cuenta_id;
+    if(id != 0){/*
+    $('#'+id).append(
+    '<ul role="group" class="jstree-children" style="">' +
+        '<li role="treeitem" aria-selected="false" ' +
+        'aria-level="2" aria-labelledby="20100_anchor" id="'+data.id +'" ' +
+        'class="jstree-node  jstree-leaf jstree-last">' +
+        '<i class="jstree-icon jstree-ocl" role="presentation">' +
+        '</i>' +
+        '<a class="jstree-anchor" href="#" tabindex="-1" id="20100_anchor">' +
+        '<i class="jstree-icon jstree-themeicon" role="presentation">' +
+        '</i> '+ $('#CodCuenta').val()+' - '+data.nombre +'' +
+        '</a>' +
+        '</li>' +
+        '</ul>'
+    );
+    $('#'+id).attr('aria-expanded', 'false');*/
+        $('#jstree').jstree().create_node(''+data.cuenta_Padre  ,  { "id" : ""+data.codigo, "text" : data.codigo+" - "+data.nombre }
+        );
+    }else{
+
+        $('#jstree').jstree().create_node(''+data.cuenta_Padre  ,  { "id" : ""+data.codigo, "text" : data.codigo+" - "+data.nombre }
+        );
+        //  sel = ref.create_node(sel, {"type":"file"});
+
+    }
+
+}
+
+function modificarArbol() {
+    var ref = $('#jstree').jstree(true),
+        sel = ref.get_selected();
+    $('#ModalCuenta').modal('hide');
+
+    var newText = "Some new text";
+    ref.edit(sel, $('#CodCuenta').val()+" - "+$('#NombreCuenta').val());
+
+   // $('#jstree').jstree('rename_node', [sel , newText] );
+
+    setTimeout(function () {
+
+        toastr.success('Se modifico correctamente', {timeOut: 5000});
+    }, 500);
+}
+
+function bloqu() {
+
+    $.blockUI({
+        message: 'Un momento Porfavor',
+        css: {
+        border: 'none',
+        padding: '15px',
+        backgroundColor: '#000',
+        '-webkit-border-radius': '10px',
+        '-moz-border-radius': '10px',
+        opacity: .5,
+
+        color: '#fff'
+    } });
+
+    setTimeout($.unblockUI, 1000);
+}
+function bloquR() {
+
+    $.blockUI({
+        message: 'Un momento Porfavor',
+        css: {
+            border: 'none',
+            padding: '15px',
+            backgroundColor: '#000',
+            '-webkit-border-radius': '10px',
+            '-moz-border-radius': '10px',
+            opacity: .5,
+
+            color: '#fff'
+        } });
+
+    setTimeout($.unblockUI, 2500);
+}
+
+
+
+
+
+
+
+
+

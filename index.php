@@ -29,7 +29,7 @@ input:-webkit-autofill {
           <div class="login-group">
             <div class="form-group">
               <label for="lg_username" class="sr-only">Usuario</label>
-              <input type="email" class="form-control" id="lg_username" name="correo" placeholder="username">
+              <input type="text" class="form-control" id="lg_username" name="correo" placeholder="username">
             </div>
             <div class="form-group">
               <label for="lg_password" class="sr-only">Contrasena</label>

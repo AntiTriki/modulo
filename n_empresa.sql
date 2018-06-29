@@ -1,0 +1,4 @@
+INSERT INTO n.empresa (correo, nit, razon_social, sigla, direccion, nivel, id_usuario) VALUES ('livees@livees.com', '56323478', 'Livees', 'LIV', 'calle Roca #92', 5, 1);
+INSERT INTO n.empresa (correo, nit, razon_social, sigla, direccion, nivel, id_usuario) VALUES ('bon@bon.com', '57324578', 'B-On', 'BON', 'calle Renega #2', 3, 1);
+INSERT INTO n.empresa (correo, nit, razon_social, sigla, direccion, nivel, id_usuario) VALUES ('prueba@prueba.com', '7656757', 'Prueba 2', 'PRU', 'asdasdasdasdas', 3, 1);
+INSERT INTO n.empresa (correo, nit, razon_social, sigla, direccion, nivel, id_usuario) VALUES ('temp@temp.com', '666', 'Parcial2', 'PAR2', 'asda', 3, 1);

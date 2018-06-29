@@ -1,0 +1,1076 @@
+
+<!DOCTYPE HTML>
+<html lang="es">
+<!--************************************************************************************************************--><head>
+<!--TITLE Y META-->
+<title>Livees | Bolsa de Compra</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100,500,700' rel='stylesheet' type='text/css'>
+		<link rel="icon" href="icon-normal.png" />
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+        <link href="apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+        <link href="apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+        <link href="apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+        <link href="apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+        <link href="icon-hires.png" rel="icon" sizes="192x192" />
+        <link href="icon-normal.png" rel="icon" sizes="128x128" />
+        
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Crea tu cuenta Livees para que tu empresa, insituci&oacute;n o negocio ayude a las personas a descurbir sus emociones. Capta, rentabiliza y fideliza a tus suscriptores con herramientas de gesti&oacute;n de Publicidad, Anuncios y posicionamiento de marca." />
+<meta name="keywords" content="Marketplace, Comercio electr&oacute;nico en Bolivia, vender en Bolivia, Anuncios Bolivia" />
+<meta name="author" content="Hugo Sergio Rejas Viscarra - Livees" />
+<script src="jquery-1.7.1.min.js"></script>
+<link rel="stylesheet" href="gstyle_buttons_final.css" type="text/css"  media="screen">
+<style>
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color: #000;
+	background-color:#E4E4E7;
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 350px; /* bottom = footer height */
+}
+a{ text-decoration:none}
+*:focus {outline: none;}
+</style>
+<style>
+/*----------------------*/
+.zebra th:hover {
+/*background: rgba(255, 255, 255,.1);*/
+background:#D2D2D2;
+cursor:pointer;
+}  
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {
+   /* background: #f5f5f5;*/
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    
+	text-align: left;
+	color:#333;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px
+    border-radius: 0 0 6px 6px
+}
+</style>
+<link rel="stylesheet" href="colorbox7.css" />
+<script src="jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				$(".pre_transaccion").colorbox({iframe:true, width:"44%", height:"85%"});
+				$(".pre_transaccion").colorbox({overlayClose: false});
+			
+				$(".mpagos").colorbox({iframe:true, width:"800px", height:"580px"});
+				$(".mpagos").colorbox({onLoad: function() {$('#cboxClose').remove();}});
+				$(".mpagos").colorbox({overlayClose: false});
+				
+				$(".diselect").colorbox({iframe:true, width:"800px", height:"580px"});
+				$(".diselect").colorbox({onLoad: function() {$('#cboxClose').remove();}});
+				$(".diselect").colorbox({overlayClose: false});
+				
+				$(".diselectalert").colorbox({iframe:true, width:"440px", height:"260px"});
+				$(".diselectalert").colorbox({onLoad: function() {$('#cboxClose').remove();}});
+				$(".diselectalert").colorbox({overlayClose: false});
+				
+				
+				$(".login").colorbox({iframe:true, width:"600px", height:"473px"});
+				$(".login").colorbox({onLoad: function() {$('#cboxClose').remove();}});
+				
+				$(".desktop").colorbox({iframe:true, innerWidth:600, innerHeight:473});
+				$(".desktop").colorbox({onLoad: function() {$('#cboxClose').remove();}});
+				$(".desktop").colorbox({overlayClose: false});
+				
+				
+				
+			});
+		var numero = [];
+</script>
+</head>
+<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+<!--FIXED ADDS-->
+<!--<link rel="stylesheet" href="../colorbox.css" />
+<script src="../jquery.colorbox_mobile.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$(".ticket").colorbox({iframe:true, width:"100%", height:"90%"});
+				$(".paccion").colorbox({iframe:true, width:"100%", height:"50%"});
+				$(".payme").colorbox({iframe:true, width:"100%", height:"90%", onClosed:function(){
+        parent.location.reload();
+    }});
+				$(".mp").colorbox({iframe:true, width:"100%", height:"90%"});
+			});
+		</script>-->
+  <script src="jquery.lockfixed.js"></script>
+<link href="scroll_div.css" rel="stylesheet">
+  <!--FIN FIXED ADDS-->
+  <!--TOP BAR FIXED-->
+<link href="l_topbar/css.css" media="screen" rel="stylesheet" type="text/css" />
+<!--FIN TOP BAR FIXED-->
+<!--STYLE BUSCAR-->
+<link rel="stylesheet" type="text/css" href="l_buscar/style_buscar.css" />
+<script type="text/javascript" src="l_buscar/script_buscar.js"></script>
+<!--FIN BUSCAR-->       
+<style>
+.curved_div {
+    border-radius: 3px;
+}
+</style>
+<!--  <script src="jquery-1.7.1.min.js"></script>-->
+
+<div id="barra_empresa">
+	
+    <div id="justificado" style="margin-left:auto; margin-right:auto; width:980px; height:50px; background-color:#FFF"><!--JUSTIFICADO-->
+		
+        <!--LOGO-->
+        <div id="logo" onclick="location.href='inicio_2017'" style="cursor:pointer; background-image:url(l_topbar/livees_blue.png);background-repeat:no-repeat; width:162px;height:50px;float:left" align="absmiddle">
+		</div>
+        <!--FIN LOGO-->
+        
+        <!--BUSCADOR-->
+        <div id="buscador" style=" margin-left:38px;width:325px; height:50px;float:left;text-align:left; vertical-align:middle; line-height:50px;background-color: transparent">
+		<div class="container-4" style=" vertical-align:bottom">
+        <input id="busc" class="text1" type="search" style="width:325px;height:28px; border-radius: 0px; -webkit-border-radius: 0px; "  value="" size="49" placeholder="Buscar empresa, instituci&oacute;n, negocio..." onKeyUp="enterlookup(event);" onBlur= "ocultar();" autocomplete="off" />
+        <!--<button style="height:28px !important; border-radius: 0px; -webkit-border-radius: 0px;" class="icon" onClick="lookup(document.getElementById('busc').value);"><i class="fa fa-search"></i></button>-->
+      </div>
+        <div id="suggestions"></div>
+        </div>
+        <!--FIN BUSCADOR-->	
+<script>
+ $(document).ready(function() {
+ 	 $("#offers_news").load("mis_offers_count");
+   var refreshId = setInterval(function() {
+      $("#offers_news").load('mis_offers_count?randval='+ Math.random());
+   }, 60000);
+   $.ajaxSetup({ cache: false });
+});
+</script>
+
+        
+
+                   
+                    
+                    
+        <div style="width:172px; float:left; background-color: transparent; height:50px; margin-right:12px; margin-left:12px;">
+        <!--<img src="marketplace_ads/mkp2.png" style="height:24px; margin-top:10px; cursor:pointer" title="Ir a Marketplace" onclick="window.location.href='marketplace';" />-->
+        <!--<div style=" width:74px; height:50px; float:left">
+        </div>-->
+        <!--BOLSA-->
+        <link rel="stylesheet" href="animations.css" type="text/css">
+        <style>
+		/***********
+		* rotateIn *
+		************/
+		
+		@-webkit-keyframes rotateIn { 
+			0% { 
+				-webkit-transform-origin: center center; 
+				-webkit-transform: rotate(-200deg); 
+				opacity: 0; 
+			} 
+			100% { 
+				-webkit-transform-origin: center center; 
+				-webkit-transform: rotate(0); 
+				opacity: 1; 
+			} 
+		} 
+		@keyframes rotateIn { 
+			0% { 
+				transform-origin: center center; 
+				transform: rotate(-200deg); 
+				opacity: 0; 
+			} 
+			100% { 
+				transform-origin: center center; 
+				transform: rotate(0); 
+				opacity: 1; 
+			} 
+		} 
+		.rotateIn.go { 
+			-webkit-animation-name: rotateIn; 
+			animation-name: rotateIn; 
+		}
+		</style>
+        <div id="car" style="visibility:hidden;  text-align:center;width:50px; float:left;height:50px;background-color: transparent;vertical-align:middle; line-height:50px; cursor:pointer" title="Ir a Checkout">
+                    <div class="animatedParent row article">
+                    	<div class="repeat animated bounceIn fast" id="actualiza_carro" style="float:left; width:18px;;vertical-align:middle; line-height:22px; height:22px;background-color: rgba(0,204,51,0.8); color:#FFF;z-index:99; font-size:11px;font-weight:500; position:absolute; border-radius:2px; margin-top:5px">
+                    	<script src='css3-animate-it.js'></script>
+					<script>
+					$(document).ready(function(){
+						$.doTimeout(30000, function(){
+							$('.repeat.go').removeClass('go');
+					
+							return true;
+						});
+						$.doTimeout(30020, function(){
+							$('.repeat').addClass('go');
+							return true;
+						});
+						
+					});
+					</script>
+                    	</div>
+                    </div>
+                    <img id="logo_carro" src="livees_ads/lckout_bagmp.png" style="height:25px; vertical-align:middle;; cursor:pointer;line-height:40px" onclick="window.location.href='wishlist7';" >
+                    
+        </div>
+        <!--BOLSA-->
+        
+		<div style="width:64px; height:50px; float:left; text-align:center; background-color: transparent; vertical-align:middle">
+        <!--MENU MARKETPLACE-->
+        
+			<style>
+                .container {
+      width: 64px;
+      height:50px;
+     /* background:;  */
+      
+    }
+    
+    .launcher {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    
+    header { text-align: center; }
+    
+    header h1 {
+      font-size: 2em;
+      line-height: 1.3;
+      margin: 0;
+      font-weight: 300;
+      margin: 20px;
+    }
+    
+    .app-launcher {
+      position: absolute;
+      left: -135px;
+      top: 60px;
+      display:none;
+	  
+      
+    }
+    
+    .app-launcher::before {
+      content: '';
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid white;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      margin-left: -5px;
+      z-index: 1;
+    }
+    
+    .apps {
+      position: relative;
+      border: 1px solid #ccc;
+      border-color: rgba(0,0,0,.2);
+      box-shadow: 0 2px 10px rgba(0,0,0,.2);
+      -webkit-transition: height .2s ease-in-out;
+      transition: height .2s ease-in-out;
+      /*min-height: 196px;*/
+      min-height: 161px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 320px;
+     /* height: 378px;*/
+      height: 343px;
+      margin-bottom: 30px;
+    }
+    
+    .launcher .button {
+      cursor: pointer;
+      width: 50px;
+      margin-left:auto; margin-right:auto;
+      
+    /*  margin: 0 auto;*/
+     
+    }
+    
+    .hide { display: none; }
+    
+    .apps ul {
+      background: #fff;
+      margin: 0;
+      padding: 28px;
+      width: 264px;
+      overflow: hidden;
+      list-style: none;
+    }
+    
+    .apps ul li {
+      float: left;
+      height: 59px;
+      width: 88px;
+      color: black;
+      padding: 18px 0;
+      text-align: center;
+    }
+    
+    .apps .more {
+      line-height: 35px;
+      text-align: center;
+      display: block;
+      width: 320px;
+      background: #f5f5f5;
+      cursor: pointer;
+      height: 35px;
+      overflow: hidden;
+      position: absolute;
+      text-decoration: none;
+      color: #282828;
+    }
+    
+    .apps.overflow .more {
+      border-bottom: 1px solid #ebebeb;
+      left: 28px;
+      width: 264px;
+      height: 0;
+      cursor: default;
+      height: 0;
+      outline: none;
+    }
+    
+    .fa-facebook-square { color: #3b5998; }
+    
+    .fa-twitter-square { color: #00aced; }
+    
+    .fa-google-plus-square { color: #dd4b39; }
+    
+    .fa-youtube-square { color: #bb0000; }
+    
+    .fa-linkedin { color: #007bb6; }
+    
+    .fa-instagram { color: #517fa4; }
+    
+    .fa-pinterest { color: #cb2027; }
+    
+    .fa-tumblr-square { color: #32506d; }
+    
+    .fa-skype { color: #009EE5; }
+    
+    .fa-android { color: #99CC00; }
+    
+    .fa-dribbble { color: #C35D9C; }
+    
+    .fa-html5 { color: #F65B1F; }
+    
+    .fa-css3 { color: #0070BA; }
+    
+    .fa-dropbox { color: #65B1ED; }
+    
+    .fa-windows { color: #1DAAE2; }
+    
+    .fa-linux { color: #DD4814; }
+    
+    .fa-apple { color: #403F3F; }
+    
+    div ::-webkit-scrollbar-thumb {
+     background-clip: padding-box;
+     background-color: rgba(0,0,0,.3);
+     border: 5px solid transparent;
+     border-radius: 10px;
+     min-height: 20px;
+     min-width: 20px;
+     height: 5px;
+     width: 5px;
+    }
+    
+    div ::-webkit-scrollbar {
+     height: 15px;
+     width: 15px;
+     background: white;
+    }
+    
+    div ::-webkit-scrollbar-button {
+     height: 0;
+     width: 0;
+    }
+            </style>
+        	<div class="container">
+  				<div class="launcher">
+    			<div class="button">
+            <img src="livees_ads/menu_mk7a.png" title="Accesos"/>
+            </div>
+    			<div class="app-launcher">
+      			<div class="apps">
+        <ul class="first-set">
+          <li><a href="https://www.livees.net/sub.marketplace7?v=0" ><img title="Empresas" src="livees_ads/menu_mkp7/empresas.png" /></a></li>
+          <li><a href="https://www.livees.net/apps.marketplace7?v=0" ><img title="Aplicaciones" src="livees_ads/menu_mkp7/apps.png" /></a> </li>
+          <li><a href="https://www.livees.net/readers.marketplace7?v=0" ><img title="Livees Readers" src="livees_ads/menu_mkp7/readers.png" /></a> </li>
+          <li><a href="https://www.livees.net/games.marketplace7.php?v=0" ><img title="Juegos"src="livees_ads/menu_mkp7/juegos.png" /></a> </li>
+          <li><a href="#" ><img title="Pel&iacute;culas"src="livees_ads/menu_mkp7/movies.png" /></a> </li>
+          <li><a href="#"><img title="M&uacute;sica" src="livees_ads/menu_mkp7/musica.png" /></a> </li>
+          <li><a href="https://www.livees.net/tiendas.marketplace7" ><img title="Tiendas" src="livees_ads/menu_mkp7/tiendas.png" /></a> </li>
+          <li><a href="http://www.livees.net/noticias.marketplace7" ><img title="Noticias" src="livees_ads/menu_mkp7/noticias.png" /></a> </li>
+          <!--<li><a href="#"><i class="livees_ads/menu_mkp7/empresas.png"></i></a> </li>-->
+        </ul>
+        <!--<a href="#" class="more">Ver M&aacute;s</a>
+        <ul class="second-set hide">
+          <li><a href="#"><i class="fa fa-dribbble fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-html5 fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-linux fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-css3 fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-github fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-pinterest fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-tumblr-square fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-dropbox fa-4x"></i></a> </li>
+          <li><a href="#"><i class="fa fa-instagram fa-4x"></i></a> </li>
+        </ul>-->
+      </div>
+    		</div>
+  			</div>
+			</div>
+			<script>
+            $(document).ready(function(){
+        
+          var scroll = false;
+          var launcherMaxHeight = 378;
+          var launcherMinHeight = 296;
+          
+          // Mousewheel event handler to detect whether user has scrolled over the container
+          $('.apps').bind('mousewheel', function(e){
+                if(e.originalEvent.wheelDelta /120 > 0) {
+                  // Scrolling up
+                }
+                else{
+                    // Scrolling down
+                    if(!scroll){
+                        $(".second-set").show();
+                        $('.apps').css({height: launcherMinHeight}).addClass('overflow');
+                        scroll =true; 
+                        $(this).scrollTop(e.originalEvent.wheelDelta);
+                    }
+                }
+            });
+          
+          // Scroll event to detect that scrollbar reached top of the container
+          $('.apps').scroll(function(){
+            var pos=$(this).scrollTop();
+            if(pos == 0){
+                scroll =false;
+                $('.apps').css({height: launcherMaxHeight}).removeClass('overflow');
+                $(".second-set").hide();
+            }
+          });
+          
+          // Click event handler to show more apps
+          $('.apps .more').click(function(){
+            $(".second-set").show();
+            $(".apps").animate({ scrollTop: $('.apps')[0].scrollHeight}).css({height: 296}).addClass('overflow');
+          });
+          
+          // Click event handler to toggle dropdown
+          $(".button").click(function(event){
+            event.stopPropagation();
+            $(".app-launcher").toggle();
+          });
+          
+          $(document).click(function() {
+            //Hide the launcher if visible
+            $('.app-launcher').hide();
+            });
+            
+            // Prevent hiding on click inside app launcher
+            $('.app-launcher').click(function(event){
+                event.stopPropagation();
+            });
+      
+    });
+    
+    // Resize event handler to maintain the max-height of the app launcher
+    $(window).resize(function(){
+            $('.apps').css({maxHeight: $(window).height() - $('.apps').offset().top});
+    });
+
+            </script>
+        
+        <!--FIN MENU MARKETPLACE--> 
+        </div>
+		
+		        <div id="offers_news" style=" text-align:center;width:50px; float:left;height:50px;background-color: transparent;vertical-align:middle; line-height:50px; cursor:pointer" title="Notificaciones" onClick="window.location.href='EmpresasFavoritas'"></div>
+                </div>
+        
+        
+        <!--MENU EMPRESA-->
+        <div id="USEROP" style=" width:210px; height:50px;display:inline-block;vertical-align:top;">
+    	<div class="dropdown">
+            <a class="account" style="text-decoration: none; color:#333">
+            <div id="fotito" style="display:inline-block;vertical-align:middle;width:43px;
+            line-height:42px; height:42px;margin:0px auto;text-align:center;background-color:#FFF;border-radius: 3px;
+            margin-top:4px;
+    -webkit-border-radius: 3px;
+                border:solid 1px #E6E6E6;
+                 ">
+        	<img draggable='false' id='fotito'   src='upload_users/1480977746318.png' style='vertical-align:middle; max-height:36px; max-width:36px;position: relative; margin-top:-3px '>        </div>
+            <div style="font-weight:500; font-size:14px;display:inline-block;vertical-align:top;width:187px; height:49px;line-height:49px;margin:0px auto;text-align:left; background-color:#FFF;padding-left:4px">Nilds Vasquez</div>        
+        
+        </a>
+        
+            
+	<div class="submenu" style="display: none;font-weight:100; font-size:12px">
+
+	  <ul class="root">
+		<!--<li>
+	      <a href="SolicitudCertificacion" class="certifica" >Certificaci&oacute;n</a>
+	    </li>-->
+        
+	                <li>
+          <a href="PerfilSuscriptor" style="font-size:12px">Configuraci&oacute;n de perfil</a>
+          </li>
+		  <li>
+          <a href="https://www.livees.net/marketplace7" style="font-size:12px">Livees Marketplace</a>
+          </li>
+		  
+          
+	    
+	    <li>
+	      <a href="secure.php?logout" style="font-size:12px">Cerrar Sesi&oacute;n</a>
+	    </li>
+	  </ul>
+	</div>
+    
+	</div>
+    </div>
+    	<!--FIN MENU EMPRESA-->
+        
+        
+        
+	</div><!--FIN JUSTIFICADO-->
+</div>
+<!--MENU DESPLEGABLE SUPERIOR LOGIN-->
+<script src="l_topbar/topbar.js"></script>
+<style>
+div.dropdown {
+color: #555;
+/*margin: 3px -22px 0 0;*/
+width: 260px;
+position: relative;
+height: 17px;
+text-align:left;
+}
+div.submenu
+{
+background: #FFF; /*fondo menu vertical*/
+position: absolute;
+/*top: -12px;*/
+/*left: -20px;*/
+z-index: 100;
+width: 260px;
+display: none;
+/*margin-left: 5px;*/
+padding: 40px 0 5px;
+border-radius: 2px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.dropdown  li a {
+   
+    /*color: #555555;*/ /*color de letra submenu vertical*/
+    color: #000;
+	display: block;
+    font-family: arial;
+    font-weight: bold;
+    padding: 6px 15px;
+  cursor: pointer;
+text-decoration:none;
+}
+
+.dropdown li a:hover{
+    background:#999;/*COLOR SOMBRA SUB MENU PASAR SOBRE TEXTO*/
+    /*background: rgba(0, 0, 0,.2);*/
+	color: #FFF;
+    text-decoration: none;
+    
+}
+a.account {
+/*font-size: 11px;*/
+line-height: 16px;
+color: #fff;
+position: absolute;
+z-index: 110;
+display: block;
+/*padding: 0px 0 0 15px;*/
+padding: 0px 0 0 2px;
+height: 33px;
+width: 260px;
+/*padding-top:9px;*/ /*espacio letra*/
+padding-bottom:8px;
+/*margin: 0 0 0 -10px;*/
+text-decoration: none;
+/*background: url(flecha_user.png) 165px 23px no-repeat;*/
+/*background-image:url(bg_barra_user.png);*/
+/*background: rgba(0, 0, 0,.7);*/
+/*background-image:url(bg_barra_livees_2014.png);*/
+/*background-color:#333;*/
+ background: url(arrow.png) 251px 37px no-repeat;
+
+cursor:pointer;
+}
+
+/*.account:hover {
+	background-image:url(bg_barra_livees.png);
+	
+}*/
+.root
+{
+list-style:none;
+/*margin:0px;*/
+margin-top:9px;
+padding:0px;
+font-size: 10px;
+padding: 12px 0 0 0px;
+border-top:1px solid #dedede;
+	
+	
+}
+
+
+</style>
+<!--FIN MENU DESPLEGABLE SUPERIOR LOGIN-->
+
+
+<body>
+<div id="container2" style="width: 980px; height:auto; margin-left:auto; margin-right:auto; margin-top:50px; background-color: transparent; margin-bottom:15px; overflow:auto">
+<form id="form" method="POST">
+    				<div style="width:738px; height:auto; float:left; margin-bottom:30px;">
+					  <div style="width:auto; height:auto; background-color:#FFF;border-bottom:3px solid #BEBEBE;border-top:1px solid #BEBEBE;border-left:1px solid #BEBEBE;border-right:1px solid #BEBEBE; margin-top:15px; padding:15px" class="curved_div">
+                    		<div style="width:100%; height:auto;background-color:#FFF; border-bottom:1px solid #f5f5f5; overflow:auto">
+                		<div style="width:100%; background-color: transparent;height:auto">
+                			<script>
+							function chau(str,str2) {
+						if (str == "" && str2 == "") {
+							//document.getElementById("txtHint").innerHTML = "";
+							return;
+						} else { 
+							if (window.XMLHttpRequest) {
+								// code for IE7+, Firefox, Chrome, Opera, Safari
+								xmlhttp = new XMLHttpRequest();
+							} else {
+								// code for IE6, IE5
+								xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+							}
+							xmlhttp.onreadystatechange = function() {
+								if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+									//document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+								
+								}
+							};
+							var arti = document;
+							xmlhttp.open("GET","delete_wishlist?u="+str+"&a="+str2,true);
+							xmlhttp.send();
+						}
+					}
+						</script>
+            			<script language="javascript" type="text/javascript">
+  						 function actualiza(){
+   setTimeout(function(){ 
+        location.reload(true);
+    }, 1500);
+   }
+  						</script>
+                        <a  href="CheckOut7.php?k=" style="color:#666">? Volver</a><br />
+            			<img src="livees_ads/lckout_bag0or.png" style="height:23px; vertical-align:middle"><b style="font-size:24px; vertical-align:middle">&nbsp;Mi Bolsa de compra</b>
+            			<br /><br />
+            			<b style="font-size:18px; vertical-align:middle">&nbsp;&nbsp;&nbsp;&nbsp;Detalle del pedido</b>
+            			<br /><br />
+            			<table style="width:100%" class="zebra"  id="table1">
+                           <thead>
+                           <tr>
+                              <th align="center" style="width:10px">#</th>
+                              <th align="center">Item</th>                              
+                              <th align="center">Bs.</th>
+                              <th align="center">Cantidad</th>
+                              <th align="center">Sub total</th>
+                              <th align="center">Quitar</th>                               
+                           </tr>
+                  		   </thead>
+             				            <tr>
+            <td>
+            1            </td>
+            <td>
+            <img src="empresas/Pidelo/publicidad/1a.jpg" style=" width:80px; vertical-align:middle">            &nbsp;
+            Abrelatas            </td>  
+            <td>
+            130.00            </td>
+            <td>
+            <script>
+			function calcular0(){
+			var m1 = document.getElementById("unidades_a_comprar0").value;
+			var m2 = document.getElementById("subtotal0").value;
+			//document.getElementById('subtotal2').value = m1*m2;			
+			document.getElementById('subtotal20').innerHTML =m1*m2;	
+			};
+			</script>
+			 <script>
+			
+			numero[0] =20;
+			</script>
+            
+			<select class="text" style=" width:50px" onChange="calcular0();recarga2()" id="unidades_a_comprar0" name="unidades0"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+            </td>
+            <input id="subtotal0" type="hidden" value="130" style=" display:none" readonly>
+            <td id="subtotal20" class="col1" style="text-align:right">
+            130.00            </td>
+            <td style="vertical-align:middle">
+&nbsp;&nbsp;<img title="Quitar item" src="livees_ads/chau_ckout.png" style="cursor:pointer;height:25px" onClick="chau('318',79);actualiza();">
+            </td>
+            </tr>
+            	            					<tr>
+             <td colspan="6">
+            <br />
+            <b style="font-size:18px; vertical-align:middle">&nbsp;Detalle de la entrega</b>
+            <br />
+             </td>
+             </tr>
+         						<tr id="envios" height="70px">
+            <td colspan="4">Delivery solo para Santa Cruz. Entrega en 48 horas. (Fee no facturable en Bs).<br /><!--<font color="#CCCCCC">Delivery Powered by </font><img style="vertical-align:middle" src="livees_ads/netcomidas.jpg" />--></td>
+                     
+            <td class="col1" id="enviod"></td>
+        	</tr>    
+        						<tr>
+            <td colspan="4" style="font-size:22px; text-align:right"><b>Total a pagar en Bs.</b></td>        
+            <td colspan="56" id="total" class="total" style="background-color:rgba(0,204,51,0.7); text-align:right; font-size:22px; color:#FFF"></td>
+        	</tr>
+    							<tr>
+             <td colspan="6">
+            <br />
+            <b style="font-size:18px; vertical-align:middle">&nbsp;Detalle de facturaci&oacute;n</b>
+            <br />
+            La compra incluye factura e impuestos establecidos por Ley.<br />
+             </td>
+            </tr>
+             			</table>
+             			 						 <script>
+						// var com = 40;
+			//			 
+			//			 
+			//			 function buscar()
+			//			 {
+			//			 for(i=0;i<numero.length;i++)
+			//			 {
+			//				 if(numero[i] == 20)
+			//				 {
+			//					 com=20;
+			//				 }
+			//				 else if(numero[i]==30)
+			//				 {
+			//				     com=30;
+			//				 }
+			//				 else if(numero[i]==40)
+			//				 {
+			//					 com=40;
+			//				 }
+			//			 }
+			//			 return com.toFixed(2);
+			//			 }
+			 var com=20 ;
+			  var num ;
+						 function buscar(){
+							 if(numero.length==1){
+								 com=numero[0];
+							 }else{
+						num=numero[0];	
+						 for(i=0;i<numero.length;i++){
+							 
+						 if(numero[i]<=com){
+							 
+							 }else
+							 {
+								 com=numero[i];
+							 }
+						 }
+						 com=com+com/2;
+						 }
+						 return com;
+						 }
+						 document.getElementById("enviod").innerHTML = buscar();
+						 </script>
+						 						<script>
+                         
+                        var getSum = function (colNumber) {
+                var sum = 0;
+                var selector = '.col' + colNumber;
+            
+                $('#table1').find(selector).each(function (index, element) {
+                    sum += parseInt($(element).text());
+                });  
+            
+                return sum.toFixed(2) ;        
+            };
+            
+            $('#totas').each(function (index, element) {
+                $(this).val(getSum(index + 1));
+                 
+            });
+                         
+                        </script>
+                        <script>
+                        function recarga2(){
+                        var getSum = function (colNumber) {
+                var sum = 0;
+                var selector = '.col' + colNumber;
+            
+                $('#table1').find(selector).each(function (index, element) {
+                    sum += parseInt($(element).text());
+                });  
+            
+                return sum.toFixed(2) ;        
+            };
+            
+            $('#totas').each(function (index, element) {
+                $(this).val(getSum(index + 1));
+                 
+            });
+            document.getElementById('total').textContent=document.getElementById('totas').value;
+                        };
+                        
+                        </script>
+           				 <br />
+            			<input id="totas" name="totas" type="text"  style=" display:none" >
+            			</div>            
+    				</div>
+    					<script>
+						$(document).ready(function() {
+					$('#totas').each(function (index, element) {
+					$(this).val(getSum(index + 1));
+					
+					});
+					document.getElementById('total').textContent=document.getElementById('totas').value;
+					});
+    					</script>
+                      </div>
+                    </div>  	
+					<div style="width:227px; height:auto; float:left; background-color: transparent;  margin-left:15px; margin-top:15px;">
+						<div id="resumen_pago" style="width:227px; height:auto; background-color: transparent;overflow:auto">
+                                                        <div id="sumary2" style="width:100%; height:auto; background-color:#FFFFFF;border-bottom:3px solid #BEBEBE;border-top:1px solid #BEBEBE;border-left:1px solid #BEBEBE;border-right:1px solid #BEBEBE; padding:10px; overflow:auto" class="curved_div">
+								<div style="width:100%; height:auto; padding:5px; background-color:#FFF; border-bottom:1px solid #f5f5f5; font-size:18px; overflow:auto">
+        							<div style="width:75%; float:left; height:25px">
+        								<b>M&eacute;todo de pago</b>
+        							</div>
+        							<div style="width:25%; float:left; height:25px; text-align:right; background-color:#FFF">
+										&nbsp;<a style="font-size:12px;text-decoration:none" class="mpagos" href="mp" title="Cambiar m&eacute;todo de pago"><img align="absmiddle" src="livees_ads/metodo_pago_tool.png"></a>        							</div>
+								</div>
+								<br>
+            					<div style="width:100%; background-color: transparent; float:left; height:auto">
+            						<div style="width:100%;background-color:transparent;text-align:center; font-size:12px">Payme<br><br><img style="height:25px" src="livees_ads/metodos_pago/logo-payme.png"><br><br><b style="font-size:18px">Pay-Me</b></div>            							<br>
+             							<div style="width:150px; margin-left:auto; margin-right:auto">
+											                                          			<button type="submit" formaction="pre_payme_masivo.php" class="btn" style="background:#3A8E00;padding:2%;width:100%;height:30px !important; margin-left:auto;margin-right:auto; background-color:#0C3;box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.3);  border-radius:2px;text-shadow:none" >
+										  			<span class="" style=" width:100%; font-size:18px; color:#fff; line-height:18px">
+										  			Pagar
+										  			</span>
+										  			</button> 
+										   		            								</form>
+										</div> 
+                                                                      
+                          		</div>
+							</div>
+                            
+                            							<div style="width:100%; height:auto; background-color:#FFFFFF;border-bottom:3px solid #BEBEBE;border-top:1px solid #BEBEBE;border-left:1px solid #BEBEBE;border-right:1px solid #BEBEBE; padding:10px; overflow:auto; margin-top:15px;" class="curved_div">
+									<div style="width:100%; height:auto; padding:5px; background-color:#FFF; border-bottom:1px solid #f5f5f5; font-size:18px; overflow:auto">
+    								    <div style="width:75%; float:left; height:auto">
+                                        <b>Datos de Entrega</b>
+                                        </div>
+                                        <div style="width:25%; float:left; height:25px; text-align:right; background-color:#FFF">
+                                        &nbsp;<a style="font-size:12px;text-decoration:none" class="diselect" href="di" title="Cambiar direcci&oacute;n de entrega"><img align="absmiddle" src="livees_ads/metodo_pago_tool.png"></a>                                        </div>
+								</div>
+    								<br />
+    								Direcci&oacute;n de entrega:<br />calle 7<br /><br />Tel&eacute;fono de contacto:<br />79903247							</div>
+                            	
+                            
+						</div>
+					</div>
+		    		    	
+</div>
+<!--<script>
+(function($) {
+
+	$.lockfixed("#resumen_pago",{offset: {top: 65}});
+	
+	/*$.lockfixed("#sidebar .promo",{offset: {top: 460, bottom: 510}});	*/
+	/*$.lockfixed("#sidebar .promo",{offset: {top: 460}});	*/
+})(jQuery);	
+</script>-->
+</body>
+<style>
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 350px;
+    width: 100%;
+	 background-color:#FFF;
+	 text-align:center; 
+}
+</style>
+<footer id="footer">
+<br />
+<table style=" width:700px; margin-left:auto; margin-right:auto">
+   <tr>
+   <td style="width:175px; text-align:left">
+   <b style="font-weight:700">OBTEN LA WEB APP</b>
+    </td>
+    <td style="width:175px; text-align:left">
+    <b style="font-weight:700">MI CUENTA</b>
+    </td>
+    <td style="width:175px; text-align:left">
+    <b style="font-weight:700">CONTACTO</b>
+    </td>
+    <td style="width:175px; text-align:left">
+    <b style="font-weight:700">SIGUENOS</b>
+    </td>
+    </tr>
+    <td style="width:175px; vertical-align:top">
+    <br />
+   <div style="width:80px; height:auto;color:#666">
+   <div style="width:40px; height:auto; float:left">
+   <img src="livees_ads/webapp_livees.png" style="height:60px" />
+   </div>
+   <div style="width:40px; height:auto; float:left">
+   <a href="AndroidLivees" style="color:#666">Android</a><br /><br />
+   <a href="iOSLivees" style="color:#666">iPhone/iPad</a><br />
+   </div>
+
+   </div>
+    </td>
+    <td style="width:175px;vertical-align:top">
+    <div style="width:175px; height:auto; text-align:left;color:#666">
+    <br />
+        <a href="compras"  style="color:#666">Mis compras</a><br /><br />
+	        <a href="EmpresasFavoritas7.php"  style="color:#666">Empresas favoritas</a><br /><br />
+	        <a href="SuscriptorReaders.php"  style="color:#666">Mis Readers</a><br /><br />
+	        <a href="PerfilSuscriptor.php"  style="color:#666">Personalizar cuenta</a><br /><br />
+	    
+    </div>
+    </td>
+    <td style="width:175px;vertical-align:top">
+    <div style="width:175px; height:auto; text-align:left;color:#666">
+    <br />    
+    <a href="condiciones" class="login" style="color:#666">Condiciones</a><br /><br />    
+    <a href="SoporteLivees" style="color:#666">Centro de Contacto</a><br /><br />
+    <a href="index" style="color:#666">Sitio Principal</a><br /><br />
+    </div>
+    </td>
+    <td style="width:175px;vertical-align:top">
+    <div style="width:175px; height:auto; text-align:left;color:#666">
+    <!--<br />    
+    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLiveesbolivia%2F&width=143&layout=button&action=like&show_faces=false&share=true&height=65&appId" width="143" height="23" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br />-->
+    <br />
+    <a href="LiveesContacto" style="color:#666">Enviar feedback</a><br /><br />    
+        <a href="LiveesEmpresarial" style="color:#03Cx">Para Empresas</a><br /><br />
+        </div>
+    </td>
+    
+    </tr>
+    </table>
+
+
+   
+   <table style=" width:980px; margin-left:auto; margin-right:auto">
+      <tr>
+    <td>
+   <a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=livees.net','SiteLock','width=600,height=600,left=160,top=170');"><img title="1&1 SiteLock" src="https://shield.sitelock.com/shield/livees.net" alt="Website security"></a>
+    </td>
+   <td>
+   <div title="Clic para verificar -Este sitio ha elegido GeoTrust SSL para un comercio electr&oacute;nico seguro y comunicaciones confidenciales.">
+   <script type="text/javascript" src="https://seal.geotrust.com/getgeotrustsslseal?host_name=www.livees.net&amp;size=S&amp;lang=en"></script><br />
+<a href="http://www.geotrust.com/ssl/" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;"></a>
+	</div>
+    </td>
+    <td>
+    <div>
+    <a title="Ir a p&aacute;gina oficial de ATC Red Enlace" href="https://www.redenlace.com.bo/payme-empresas.php?pag=4" target="new"><img src="livees_ads/LogosRedEnlace-06.png" style="height:135px"></a>
+    </div>
+    </td>
+    <td>
+    <div>
+    <a title="Ir a p&aacute;gina oficial de Tigo Money" target="new" href="http://www.tigo.com.bo/tigo-money/negocios/pagos-web"><img src="livees_ads/LogoTigoMoney.png" style="width: 100px"></a>
+    </div>
+    </td>
+    </tr>    
+    <!--<tr>
+    <td style="color:#666">
+     Integrado con: <br />      
+    <img src="livees_ads/icommkt_livees.jpg" style=" width:90px;">
+    </td>
+    <td style="color:#666">
+     Aliado<br />      
+    <img src="grupos/camebol/logo_camebol.jpg" style=" height:40px">
+    </td>
+    <td style="color:#666">
+     Aliado<br />      
+    <img src="livees_ads/xiara_livees.jpg" style=" height:40px">
+    </td>
+    <td style="color:#666">
+    Afiliado a: <br />    
+    <img src="livees_ads/cainco_livees.jpg" style=" height:40px">
+    </td>
+    </tr>-->
+    </table>
+    <!--<br />
+    <br />Livees&copy; 2016-2017. Todos los derechos reservados<br />-->
+</footer>
+</html>

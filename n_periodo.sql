@@ -1,0 +1,3 @@
+INSERT INTO n.periodo (id_gestion, nombre, fecha_inicio, fecha_fin, estado) VALUES (9, '1212', '2017-09-11 00:00:00', '2017-09-13 00:00:00', 1);
+INSERT INTO n.periodo (id_gestion, nombre, fecha_inicio, fecha_fin, estado) VALUES (12, 'Febrero', '2017-02-01 00:00:00', '2017-02-28 00:00:00', 1);
+INSERT INTO n.periodo (id_gestion, nombre, fecha_inicio, fecha_fin, estado) VALUES (12, 'Marzito', '2017-03-01 00:00:00', '2017-03-31 00:00:00', 1);
