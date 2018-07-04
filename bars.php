@@ -97,7 +97,7 @@ min-height: 100%;
                       <a href="index.php" class="navbar-brand"><?php echo $row2['sigla'] ;?></a>
       <?php }else{ ?>
 
-                <a href="index.php" class="navbar-brand">ERP</a>
+                <a href="index.php" class="navbar-brand">Sistema</a>
       <?php } ?>
 
 
@@ -170,28 +170,7 @@ if (isset($_SESSION['name'])){
         </li>
         <li role="separator" class="divider visible-xs"></li>
 
-          <li>
-              <a href="empresas.php" >Empresas</a>
-          </li>
-        <li>
-            <a href="cuenta.php" >Plan de Cuentas</a>
-        </li>
-        <li>
-            <a href="ambiente.php" >Gestiones</a>
-        </li> <li>
-            <a href="comprobante.php" >Comprobante</a>
-        </li><li>
-              <a href="nota_compra.php" >Nota Compra</a>
-          </li><li>
-              <a href="nota_venta.php" >Nota Venta</a>
-          </li><li>
-            <a href="categorias.php" >Categoria</a>
-        </li><li>
-            <a href="articulos.php" >Articulo</a>
-        </li>
-        <li>
-            <a href="../reportico" >Reporte</a>
-        </li>
+
 
         <li class="visible-xs">
             <a href="logout.php?logout">Salir</a>
@@ -204,6 +183,9 @@ if (isset($_SESSION['name'])){
 
     <?php
   }?>
+
+
+
     <!-- <script src="js/jquery.js" charset="utf-8"></script> -->
 
     <script src="js/jquery.min.js" type="text/javascript"></script>
