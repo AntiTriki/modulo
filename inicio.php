@@ -79,9 +79,9 @@ date_default_timezone_set('America/La_Paz');
      $(document).ready(function () {
          $('#Productos').jtable({
              title: 'Tabla Pacientes',
-             paging: true,
+             paging: false,
              pageSize:5,
-             sorting: true,
+             sorting: false,
              defaultSorting: 'id ASC',
              actions: {
                  //READ
