@@ -35,35 +35,21 @@ try{
 
 
 	}else if($_GET["accion"] == "actualizar"){
-        $result = mysql_query("SELECT COUNT(*) AS conteo FROM empresa where  razon_social='".$_POST["razon_social"]."' and id <> " . $_POST["id"] . " ;");
-        $row = mysql_fetch_array($result);
-        if ($row['conteo'] < 1) {
-            $result = mysql_query("SELECT COUNT(*) AS conteo FROM empresa where  sigla='".$_POST["sigla"]."' and id <> " . $_POST["id"] . " ;");
-            $row = mysql_fetch_array($result);
-            if ($row['conteo'] < 1) {
 
-                $result = mysql_query("UPDATE empresa SET correo='" . $_POST["correo"] . "', nit='" . $_POST["nit"] . "', razon_social='" . $_POST["razon_social"] . "',
-		sigla='" . $_POST["sigla"] . "',direccion='" . $_POST["direccion"] . "', nivel=" . $_POST["nivel"] . " WHERE id=" . $_POST["id"] . ";");
+
+
+                $result = mysql_query("UPDATE paciente SET nombre='" . $_POST["nombre"] . "',ci ='" . $_POST["ci"] . "', direccion='" . $_POST["direccion"] . "', telefono=" . $_POST["telefono"] . " WHERE id=" . $_POST["id"] . ";");
                 $jTableResult = array();
                 $jTableResult['Result'] = "OK";
                 print json_encode($jTableResult);
 
 	}else if($_GET["accion"] == "eliminar"){
-        $result = mysql_query("SELECT count(*) as cont FROM gestion where id_empresa=".$_POST["id"].";");
-        $row = mysql_fetch_array($result);
-        if($row['cont'] == 0){
-		$result = mysql_query("DELETE FROM empresa WHERE id= " . $_POST["id"] . ";");
+
+		$result = mysql_query("DELETE FROM paciente WHERE id= " . $_POST["id"] . ";");
 		$jTableResult = array();
 		$jTableResult['Result'] = "OK";
 		print json_encode($jTableResult);
-        }else{
-            $row = mysql_fetch_array($result);
-            $jTableResult = array();
-            $jTableResult['Result'] = "ERROR";
-            $jTableResult['Message'] = "No puede eliminar teniendo gestiones en la empresa";
-            print json_encode($jTableResult);
 
-        }
 	}
 	mysql_close($con);
 

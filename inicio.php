@@ -95,35 +95,33 @@ date_default_timezone_set('America/La_Paz');
              },
              fields: {
                  id: {
-                     title: 'Id Producto',
+                     title: 'Id ',
                      key: true,
                      create: false,
                      edit: false,
                      list: true
                  },
-                 razon_social: {
+                 nombre: {
                      title: 'Nombre',
                      width: '25%'
                  },
-                 sigla: {
-                     title: 'Sigla',
+                 ci: {
+                     title: 'ci',
+                     width: '25%'
+                 },
+                 telefono: {
+                     title: 'Telefono',
                      width: '25%'
 
                  },
                  direccion: {
-                     title: 'Id Producto',
+                     title: 'Direccion',
 
                      create: true,
                      edit: true,
-                     list: false
+                     list: true
                  },
-                 ShowDetailColumn: {
-                     title: '',
-                     display: function (data) {
-                         return '<a href="ambiente.php?id=' + data.record.id + '"><img style="width:20px" src="22.png" /></a>';
-                     },
-                     width: '2%'
-                 },
+
              }
          });
 
